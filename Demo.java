@@ -30,7 +30,7 @@ public class Demo{
       String new2DArr = "";
       for (int row=0; row<arr.length; row++){
         new2DArr = new2DArr + Demo.arrToString(arr[row]);
-        if (i<arr.length-1) {
+        if (row<arr.length-1) {
           new2DArr = new2DArr + "\n";
         }
       }
