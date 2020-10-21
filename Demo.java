@@ -42,7 +42,7 @@ public class Demo{
       int[][] me = new int[rows][cols];
       for(int i=0; i<rows; i++){
         for(int j=0; j<cols; j++){
-          me[i][j] = (int) (Math.random()*maxValue);
+          me[i][j] = (int) (Math.round(Math.random()*maxValue));
         }
       }
       return me;
@@ -51,9 +51,9 @@ public class Demo{
     public static int[][] create2DRandomizedArray(int rows, int cols, int maxValue){
       int[][] randoMe = new int[rows][];
       for(int i=0; i<cols; i++){
-        randoMe[i] = new int[(int) (Math.random()*cols)];
+        randoMe[i] = new int[(int) (Math.round(Math.random()*cols))];
         for(int j=0; j<randoMe[i].length; j++){
-          randoMe[i][j] = (int) (Math.random()*maxValue);
+          randoMe[i][j] = (int) (Math.round(Math.random()*maxValue));
         }
       }
       return randoMe;
