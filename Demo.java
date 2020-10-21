@@ -34,7 +34,7 @@ public class Demo{
           new2DArr = new2DArr + "\n";
         }
       }
-      return new2DArr;
+      return (String) ("{" + new2DArr + "}";
     }
 
     public static int[][] create2DArray(int rows, int cols, int maxValue){
