@@ -16,6 +16,7 @@ public class Demo{
     }
 
     public static String arrToString(int[]arr){
+      if(arr == null || arr.length==0) return "{}";
       String newArr = "";
       for (int i=0; i<arr.length; i++) {
         newArr = newArr + arr[i];
@@ -27,6 +28,7 @@ public class Demo{
     }
 
     public static String arrayDeepToString(int[][]arr){
+      if(arr == null || arr.length==0) return "{}";
       String new2DArr = "";
       for (int row=0; row<arr.length; row++){
         new2DArr = new2DArr + Demo.arrToString(arr[row]);
