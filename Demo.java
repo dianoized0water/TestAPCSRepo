@@ -44,7 +44,7 @@ public class Demo{
       int[][] arr = new int[rows][cols];
       for(int i=0; i<rows; i++){
         for(int j=0; j<cols; j++){
-          arr[i][j] = (int) (Math.round(Math.random()*maxValue));
+          arr[i][j] = (int) (Math.floor(Math.random()*(maxValue+1)));
         }
       }
       return me;
@@ -53,9 +53,9 @@ public class Demo{
     public static int[][] create2DArrayRandomized(int rows, int cols, int maxValue){
       int[][] arr = new int[rows][];
       for(int i=0; i<rows; i++){
-        arr[i] = new int[(int) (Math.round(Math.random()*cols))];
+        arr[i] = new int[(int) (Math.floor(Math.random()*(cols+1)))];
         for(int j=0; j<randoMe[i].length; j++){
-          randoMe[i][j] = (int) (Math.round(Math.random()*maxValue));
+          randoMe[i][j] = (int) (Math.floor(Math.random()*(maxValue+1)));
         }
       }
       return randoMe;
