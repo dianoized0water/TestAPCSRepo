@@ -41,19 +41,19 @@ public class Demo{
     }
 
     public static int[][] create2DArray(int rows, int cols, int maxValue){
-      int[][] me = new int[rows][cols];
+      int[][] arr = new int[rows][cols];
       for(int i=0; i<rows; i++){
         for(int j=0; j<cols; j++){
-          me[i][j] = (int) (Math.round(Math.random()*maxValue));
+          arr[i][j] = (int) (Math.round(Math.random()*maxValue));
         }
       }
       return me;
     }
 
     public static int[][] create2DArrayRandomized(int rows, int cols, int maxValue){
-      int[][] randoMe = new int[rows][];
-      for(int i=0; i<cols; i++){
-        randoMe[i] = new int[(int) (Math.round(Math.random()*cols))];
+      int[][] arr = new int[rows][];
+      for(int i=0; i<rows; i++){
+        arr[i] = new int[(int) (Math.round(Math.random()*cols))];
         for(int j=0; j<randoMe[i].length; j++){
           randoMe[i][j] = (int) (Math.round(Math.random()*maxValue));
         }
