@@ -17,43 +17,39 @@ public class Demo{
 
     public static String arrToString(int[]arr){
       if(arr == null || arr.length==0) return "{}";
-      String newArr = "";
-      for (int i=0; i<arr.length; i++) {
-        newArr = newArr + arr[i];
-        if (i<arr.length-1) {
-          newArr = newArr + ", ";
-        }
-      }
-      return (String) ("{" + newArr + "}");
+  		String newArr = "";
+  		for(int i=0; i<arr.length-1; i++)
+  			newArr += String.valueOf(arr[i]) + ", ";
+  		newArr += String.valueOf(arr[arr.length-1]);
+  		return (String) ("{" + newArr + "}");
     }
 
     public static String arrayDeepToString(int[][]arr){
-      if(arr == null || arr.length==0) return "{}";
+      if (arr == null || arr.length==0) {return "{}";}
       String new2DArr = "";
       for (int row=0; row<arr.length; row++){
         new2DArr = new2DArr + Demo.arrToString(arr[row]);
-        if (row>0) {new2DArr = " " + new2DArr;}
         if (row<arr.length-1) {
           new2DArr = new2DArr + "\n";
         }
       }
-      return (String) ("{" + new2DArr + "}");
+      return new2DArr;
     }
 
     public static int[][] create2DArray(int rows, int cols, int maxValue){
-      int[][] arr = new int[rows][cols];
+      int[][] me = new int[rows][cols];
       for(int i=0; i<rows; i++){
         for(int j=0; j<cols; j++){
-          arr[i][j] = (int) (Math.floor(Math.random()*(maxValue+1)));
+          me[i][j] = (int) (Math.floor(Math.random()*(maxValue+1)));
         }
       }
       return me;
     }
 
     public static int[][] create2DArrayRandomized(int rows, int cols, int maxValue){
-      int[][] arr = new int[rows][];
+      int[][] randoMe = new int[rows][];
       for(int i=0; i<rows; i++){
-        arr[i] = new int[(int) (Math.floor(Math.random()*(cols+1)))];
+        randoMe[i] = new int[(int) (Math.floor(Math.random()*(cols+1)))];
         for(int j=0; j<randoMe[i].length; j++){
           randoMe[i][j] = (int) (Math.floor(Math.random()*(maxValue+1)));
         }
